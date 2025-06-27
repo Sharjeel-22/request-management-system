@@ -12,14 +12,14 @@ import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
 import { useToast } from "@/hooks/use-toast"
 import { Badge } from "@/components/ui/badge"
-import { 
-  User, 
-  Shield, 
-  CreditCard, 
-  Mail, 
-  Lock, 
-  Eye, 
-  EyeOff, 
+import {
+  User,
+  Shield,
+  CreditCard,
+  Mail,
+  Lock,
+  Eye,
+  EyeOff,
   LogIn,
   Loader2,
   CheckCircle2,
@@ -27,7 +27,6 @@ import {
   Zap
 } from "lucide-react"
 
-// Hardcoded user credentials with roles
 const users = [
   {
     email: "admin@company.com",
@@ -185,7 +184,7 @@ export default function LoginPage() {
           ← Back to Home
         </Button>
       </Link>
-      
+
       <div className="w-full max-w-lg mx-auto">
         <div className="text-center mb-8">
           <Badge className="mb-4 bg-blue-100 text-blue-800 border-blue-200">
@@ -197,7 +196,7 @@ export default function LoginPage() {
           <p className="mt-4 text-xl text-gray-600 max-w-md mx-auto leading-relaxed">
             Sign in to your ResourceHub account to continue managing your resources
           </p>
-          
+
           {/* Trust indicators */}
           <div className="flex flex-wrap justify-center gap-4 mt-6">
             <Badge className="bg-green-100 text-green-800 border-green-200">
@@ -230,7 +229,7 @@ export default function LoginPage() {
                     required
                   />
                 </div>
-                
+
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
                     <Label htmlFor="password" className="text-sm font-semibold text-gray-700 flex items-center gap-2">
@@ -265,10 +264,10 @@ export default function LoginPage() {
                     </Button>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center space-x-3">
-                  <Checkbox 
-                    id="remember" 
+                  <Checkbox
+                    id="remember"
                     checked={rememberMe}
                     onCheckedChange={(checked) => setRememberMe(checked as boolean)}
                   />
@@ -281,11 +280,11 @@ export default function LoginPage() {
                 </div>
               </div>
             </CardContent>
-            
+
             <CardFooter className="p-8 pt-0">
-              <Button 
-                type="submit" 
-                className="w-full h-12 text-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all duration-200" 
+              <Button
+                type="submit"
+                className="w-full h-12 text-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all duration-200"
                 disabled={isLoading}
               >
                 {isLoading ? (
@@ -317,7 +316,7 @@ export default function LoginPage() {
                   Click any role below to auto-fill credentials and explore the platform
                 </p>
               </div>
-              
+
               <div className="grid gap-3">
                 {users.map((user) => (
                   <Card
@@ -344,7 +343,7 @@ export default function LoginPage() {
                   </Card>
                 ))}
               </div>
-              
+
               <div className="pt-3 border-t border-gray-200">
                 <p className="text-xs text-center text-gray-500">
                   <strong>All passwords:</strong> admin123, finance123, user123
@@ -394,7 +393,7 @@ export default function LoginPage() {
               Create one here
             </Link>
           </p>
-          
+
           <div className="mt-6 flex flex-wrap justify-center gap-6 text-sm text-gray-500">
             <div className="flex items-center gap-2">
               <Shield className="h-4 w-4" />
